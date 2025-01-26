@@ -1,0 +1,129 @@
+.projects {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+/* Titlul proiectului */
+.projects h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Grid pentru proiecte */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+}
+
+/* Cardurile proiectului */
+.project {
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #333;
+}
+
+/* Imaginea proiectului */
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover pentru imagine */
+.project:hover img {
+    transform: scale(1.05);
+}
+
+.project h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4badf4;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+/* Descrierea proiectului */
+.project p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+
+.project a {
+    font-size: 16px;
+    color: #4badf4;
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid #4badf4;
+    border-radius: 30px;
+    padding: 10px 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover pentru link */
+.project a:hover {
+    background-color: #4badf4;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(75, 173, 244, 0.3);
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 30px;
+    background-color: #4badf4;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #3a8fc0;
+    transform: translateX(-50%) translateY(-3px);
+}
+
+/* Responsivitate pentru ecrane medii (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Responsivitate pentru telefoane mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr; 
+    }
+}
